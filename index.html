@@ -12,7 +12,8 @@
   .content {padding: 20px;}
   .service-details {margin-bottom: 20px;}
   .question-form {background-color: #555; padding: 20px; margin-top: 20px;}
-  .question-form input, .question-form textarea {width: 100%; margin-bottom: 10px; padding: 10px;}
+  .question-form label {display: block; margin-top: 10px;}
+  .question-form input, .question-form textarea {width: 100%; margin-bottom: 10px; padding: 10px; color: black;}
 </style>
 </head>
 <body>
@@ -40,9 +41,15 @@
   <div class="question-form">
     <h2>Have a question? Ask us!</h2>
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Question" required></textarea>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+      
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+      
+      <label for="question">Your Question</label>
+      <textarea id="question" placeholder="Your Question" required></textarea>
+      
       <button type="submit" class="button">Send</button>
     </form>
   </div>
